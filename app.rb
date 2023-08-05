@@ -1,9 +1,9 @@
 require "sinatra"
 require "sinatra/reloader"
+require "http"
 
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+  @url = "https://loripsum.net/api"
+  @output = HTTP.get(@url)
+erb(:main_page)
 end
