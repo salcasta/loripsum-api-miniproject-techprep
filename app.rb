@@ -3,7 +3,7 @@ require "sinatra/reloader"
 require "http"
 
 get("/") do
-  
+
 erb(:main_page)
 end
 
@@ -62,4 +62,25 @@ get("/results") do
   @output = HTTP.get(@url)
  
 erb(:result_page)
+end
+
+
+get("/bacon") do
+  
+  erb(:bacon_ipsum_page)
+end
+
+get("/bacon_result") do
+
+  paragraph = params.fetch("paragraph")
+  paragraph_append = "&paras=#{paragraph}"
+
+  sentence = params.fetch("sentence")
+  sentence_append = "&sentences=#{sentence}"
+
+  @url = "https://baconipsum.com/api/?type=all-meat&#{paragraph_append}#{sentence_append}&start-with-lorem=1&format=text"
+
+  @output = HTTP.get(@url)
+  
+  erb(:bacon_ipsum_result)
 end

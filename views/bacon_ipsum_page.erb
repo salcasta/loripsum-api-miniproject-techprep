@@ -1,0 +1,68 @@
+<head>
+  <style>
+    div {
+      margin-bottom: 0.5em;
+    }
+
+    h1, h2 {
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      padding-left: 0.8em;
+    }
+
+    ul {
+      padding-left: 3em;
+    }
+
+    button {
+      margin: 0.7em 0;
+    }
+
+    .form_section {
+      padding-top: 1em;
+      padding-left: 0.8em;
+    }
+
+  </style>
+</head>
+
+
+<div>
+  <h1>Add Some Flavor to Your Ipsum!</h1>
+
+  <h2>with some delicious bacon/bbq words</h2>
+
+  <p>To generate your bacon ipsum, fill out the form below.</p>
+
+  <ul>
+    <li>For paragraphs use a number (default is 5)</li>
+    <li>For sentences use a number</li>
+    <li>ONLY ONE CAN BE USED</li>
+  </ul>
+</div>
+
+<div class="form_section">
+  <form action="/bacon_result">
+    <div>
+      <label for="num_para">Number of paragraphs: </label>
+      <input type="text" id="num_para" name="paragraph" placeholder="5" size="2">
+    </div>
+
+    <div>
+      <p>OR</p>
+    </div>
+
+    <div>
+      <label for="num_sent">Number of sentences: </label>
+      <input type="text" id="num_sent" name="sentence" placeholder="4" size="2">
+    </div>
+
+    <div>
+      <button><a href="#"></a>Get Your Bacon Ipsum!</a></button>
+    </div>
+
+  </form>
+</div>
