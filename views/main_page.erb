@@ -1,4 +1,48 @@
+<head>
+  <style>
+    div {
+      margin-bottom: 0.5em;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      padding-left: 0.8em;
+    }
+
+    ul {
+      padding-left: 3em;
+    }
+
+    button {
+      margin: 0.7em 0;
+      margin-left: 1.8em;
+    }
+
+    .form_section {
+      padding-top: 1em;
+      padding-left: 0.8em;
+    }
+
+  </style>
+</head>
+
 <div>
+  <h1>Get Your Ipsum!</h1>
+
+  <p>To generate your lorem ipsum, fill out the form below.</p>
+
+  <ul>
+    <li>For paragraphs use a number (default is 3)</li>
+    <li>For length use placeholder text</li>
+    <li>For the rest use "yes" for the elements you want and leave the rest empty</li>
+  </ul>
+</div>
+
+<div class="form_section">
   <form action="/results">
     <div>
       <label for="num_para">Number of paragraphs: </label>
