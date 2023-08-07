@@ -4,9 +4,24 @@
     <title>Get Your Ipsum</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <style>
+      .navbar {
+        display: flex;
+      	justify-content: space-around;
+      }
+    </style>
   </head>
 
   <body>
+
+    <div class="navbar">
+      <div><a href="/">Home</a></div>
+      <div><a href="/bacon">Bacon Ipsum</a></div>
+      <div><a href="/hipster">Hipster Ipsum</a></div>
+    </div>
+
+
     <%= yield %>
   </body>
 </html>
