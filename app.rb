@@ -13,7 +13,7 @@ get("/results") do
   paragraph = params.fetch("paragraph")
   paragraph_append = "/#{paragraph}"
 
-  length = params.fetch("length").downcase
+  length = params.fetch("length").downcase.gsub(" ", "")
   length_append = "/#{length}"
 
   if params.fetch("decorate").downcase == "yes"
