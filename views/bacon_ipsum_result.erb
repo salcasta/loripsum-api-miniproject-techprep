@@ -1,17 +1,31 @@
 <head>
   <style>
-    button {
+    embed {
+      width: 700px;
+      height: 500px;
+    }
+
+    .embed_container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button_container {
+      display: flex;
+      justify-content: center;
       margin-top: 2em;
     }
   </style>
 </head>
 
-<div>
-  <%=@output%> 
+<div class="embed_container">
+  <embed src="<%=@url %>">
 </div>
 
 
 
-<button>
-  <a href="/bacon">Go Back</a>
-</button>
+<div class="button_container">
+  <button>
+    <a href="/bacon">Go Back</a>
+  </button>
+</div>
