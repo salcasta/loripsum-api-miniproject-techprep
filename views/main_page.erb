@@ -1,5 +1,13 @@
 <head>
   <style>
+    * {
+      background-color: #EDF2F4;
+    }
+
+    .navbar div a {
+      color: #d90429;
+    }
+
     div {
       margin-bottom: 0.5em;
     }
@@ -7,6 +15,7 @@
     h1 {
       display: flex;
       justify-content: center;
+      color: #2b2d42;
     }
 
     p {
@@ -14,12 +23,23 @@
     }
 
     ul {
+      color: #2B2D42;
       padding-left: 3em;
     }
 
     button {
+      background-color: #2B2D42;
+      color: #EDF2F4;
       margin: 0.7em 0;
-      margin-left: 1.8em;
+      border: none;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    label span {
+      color: #2B2D42;
     }
 
     .form_section {
@@ -45,7 +65,7 @@
 <div class="form_section">
   <form action="/results">
     <div>
-      <label for="num_para">Number of paragraphs: </label>
+      <label for="num_para"><span>Number of paragraphs:</span> </label>
       <input type="text" id="num_para" name="paragraph" placeholder="3" size="2">
     </div>
 
