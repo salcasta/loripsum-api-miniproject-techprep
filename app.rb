@@ -91,25 +91,20 @@ get("/hipster") do
 end
 
 get("/hipster_result") do
-
-  paragraph = params.fetch("paragraph")
-  paragraph_append = "&paras=#{paragraph}"
-
-  sentence = params.fetch("sentence")
-  sentence_append = "&sentences=#{sentence}"
+  
 
   if params.fetch("paragraph").length > 0
     paragraph = params.fetch("paragraph")
     paragraph_append = "&paras=#{paragraph}"
 
-    @url = "http://hipsum.co/api/?type=hipster-centric#{paragraph_append}&format=text"
+    @url = "http://hipsum.co/api/?type=hipster-centric#{paragraph_append}&format=html"
   elsif params.fetch("sentence").length > 0
     sentence = params.fetch("sentence")
-    sentence_append = "&sentences=#{sentence}&format=text"
+    sentence_append = "&sentences=#{sentence}"
 
-    @url = "http://hipsum.co/api/?type=hipster-centric#{sentence_append}&format=text"
+    @url = "http://hipsum.co/api/?type=hipster-centric#{sentence_append}&format=html"
   else 
-   @url = "https://hipsum.co/api/?type=hipster-centric&format=text"
+   @url = "https://hipsum.co/api/?type=hipster-centric&format=html"
   end
 
 

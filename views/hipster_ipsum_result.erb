@@ -1,13 +1,15 @@
 <head>
   <style>
-    embed {
-      width: 700px;
-      height: 500px;
+
+    * {
+      background-color: #9A8C98;
     }
 
-    .embed_container {
-      display: flex;
-      justify-content: center;
+    .navbar div a {
+      color: #4A4E69;
+      background-color: #C9ADA7;
+      border-radius: 10px;
+      padding: 5px 5px;
     }
 
     .button_container {
@@ -15,16 +17,28 @@
       justify-content: center;
       margin-top: 2em;
     }
+
+    button {
+      background-color: #4A4E69;
+      color: #C9ADA7;
+      border: none;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .button_container button a {
+      background-color: #4A4E69;
+      color: #C9ADA7;
+    } 
+
   </style>
 </head>
 
-<div class="embed_container">
-  <embed src="<%=@url %>">
-</div>
-
-<div class="embed_container">
+<div class="button_container">
   <button>
-    <a href="<%=@url %>">Get Your Hipsum</a>
+    <a href="<%=@url %>" target="_blsnk">Get Your Hipsum</a>
   </button>
 </div>
 
