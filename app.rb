@@ -13,45 +13,45 @@ get("/results") do
   paragraph = params.fetch("paragraph")
   paragraph_append = "/#{paragraph}"
 
-  length = params.fetch("length")
+  length = params.fetch("length").downcase
   length_append = "/#{length}"
 
-  if params.fetch("decorate") == "yes"
+  if params.fetch("decorate").downcase == "yes"
     decorate = "decorate"
     decorate_append = "/#{decorate}"
   end
 
-  if params.fetch("link") == "yes"
+  if params.fetch("link").downcase == "yes"
     link = "link"
     link_append = "/#{link}"
   end
 
-  if params.fetch("ul") == "yes"
+  if params.fetch("ul").downcase == "yes"
     unordered_list = "ul"
     unordered_list_append = "/#{unordered_list}"
   end
 
-  if params.fetch("ol") == "yes"
+  if params.fetch("ol").downcase == "yes"
     ordered_list = "ol"
     ordered_list_append = "/#{ordered_list}"
   end
 
-  if params.fetch("dl") == "yes"
+  if params.fetch("dl").downcase == "yes"
     description_list = "dl"
     description_list_append = "/#{description_list}"
   end
 
-  if params.fetch("bq") == "yes"
+  if params.fetch("bq").downcase == "yes"
     blockquotes = "bq"
     blockquotes_append = "/#{blockquotes}"
   end
  
-  if params.fetch("headers") == "yes"
+  if params.fetch("headers").downcase == "yes"
     headers = "headers"
     headers_append = "/#{headers}"
   end 
 
-  if params.fetch("allcaps") == "yes"
+  if params.fetch("allcaps").downcase == "yes"
     allcaps = "allcaps"
     allcaps_append = "/#{allcaps}"
   end
