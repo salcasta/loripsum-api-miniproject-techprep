@@ -1,18 +1,7 @@
-# sinatra-template
+Hi this my mini API project for DPI's Tech Prep
 
-Use this repository to create new Sinatra apps. 
+**Notice**
 
-Optionally, to use `ActiveRecord` for database operations, add to the `app.rb`:
+The embed feature for the hipster ipsum result page is not working properly. I have provided a button link to see the result.
 
-```ruby
-require "sinatra/activerecord"
-```
 
-And in the `config/environment.rb` file add this code block:
-
-```ruby
-configure do
-  # setup a database connection
-  set(:database, { adapter: "sqlite3", database: "db/development.sqlite3" })
-end
-```
